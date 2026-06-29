@@ -1,5 +1,11 @@
 # @mastra/core
 
+## 1.48.0-alpha.4
+
+### Patch Changes
+
+- Fixed custom model gateways being overridden by default gateways. GatewayManager now deduplicates gateways by ID (first-wins) so custom gateways take precedence over defaults. Narrowed the auth-availability check to only swallow expected missing-credential errors instead of all errors, so real gateway failures surface during debugging. ([#18602](https://github.com/mastra-ai/mastra/pull/18602))
+
 ## 1.48.0-alpha.3
 
 ### Patch Changes
